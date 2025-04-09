@@ -14,8 +14,9 @@ return new class extends Migration
         Schema::create('hero', function (Blueprint $table) {
             $table->id();
             // $table->foreignId('user_id')->constrained('users')->onDelete('cascade');
-            $table->string('judul');
-            $table->text('deskripsi');
+            $table->string('name');
+            $table->string('icon');
+            $table->string('link');
             $table->string('gambar');
             $table->softDeletes();
             $table->timestamps();
