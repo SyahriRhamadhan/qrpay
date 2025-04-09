@@ -15,9 +15,9 @@ return new class extends Migration
             $table->id();
             // $table->foreignId('user_id')->constrained('users')->onDelete('cascade');
             $table->string('name');
-            $table->string('icon');
-            $table->string('link');
-            $table->string('gambar');
+            $table->string('icon')->nullable();
+            $table->string('link')->nullable();
+            $table->string('gambar')->nullable();
             $table->softDeletes();
             $table->timestamps();
         });
